@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\Channel.cs" />
+    <Compile Include="Classes\TV.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -94,6 +95,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Video\Video1.mp4" />
+    <Content Include="Video\Video2.mp4" />
+    <Content Include="Video\Video3.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
