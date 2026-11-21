@@ -12,6 +12,23 @@ namespace TV_Гарварт.Classes
     {
         private int activeChannel;
         private int activeVolume;
+        public int ActiveVolume
+        {
+
+            get 
+            {
+                return activeVolume;
+            }
+            set
+            {
+                if (value < 0)
+                    activeVolume = 0;
+                else if (value > 100)
+                    activeVolume = 100;
+                else
+                    activeVolume = value;
+            }
+        }
         public int ActiveChannel
         {
             get
@@ -32,7 +49,7 @@ namespace TV_Гарварт.Classes
 
         public TV()
         {
-            
+            activeVolume = 50;
             Channels.Add(new Channel()
             {
                 Name = "Практическое задание №4 Конструкторы в ООП.mp4",
@@ -82,13 +99,15 @@ namespace TV_Гарварт.Classes
             ActiveChannel--;
             SwapChanell(_MediaElement, _NameChannel);
         }
-        public void UpSound()
+        public void UpSound(MediaElement _MediaElement)
         {
-
+            ActiveVolume += 10;
+            _MediaElement.Volume = ActiveVolume / 100.0;
         }
-        public void DownSound()
+        public void DownSound(MediaElement _MediaElement)
         {
-
+            ActiveVolume -= 10;
+            _MediaElement.Volume = ActiveVolume / 100.0;
         }
     }
 }

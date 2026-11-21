@@ -36,5 +36,15 @@ namespace TV_Гарварт
         {
             TV.NextChannel(VideoPlayer, NameChannel);
         }
+
+        private void DOWN(object sender, RoutedEventArgs e)
+        {
+            TV.DownSound(VideoPlayer);
+        }
+
+        private void UP(object sender, RoutedEventArgs e)
+        {
+            TV.UpSound(VideoPlayer);
+        }
     }
 }
